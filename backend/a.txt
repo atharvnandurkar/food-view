@@ -1,0 +1,11 @@
+npx nodemon server.js
+This cmd will track express server whenever the new changes are made.
+
+src/app.js -> for creating the express server.
+
+server.js -> for starting the express server.
+
+To connect to the DB.
+src/db/db.js
+
+Need to create user authentication routes.
