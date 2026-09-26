@@ -11,7 +11,7 @@ src/db/db.js
 5) Need to create user authentication routes.
 src/routes/auth.routes.js 
 router.post("/user/register",)  --> Is api ka logic controller me likhte hai.
-
+router.post("/user/register", (req, res) => {})
 
 6) controller logic: 
 router.post("/register", (req, res) => {
@@ -24,3 +24,27 @@ router.post("/register", (req, res) => {
 7) Model create karne padenge.: src/models
 Like for User: src/models/userModel.js
 
+8) controller me logic likhne ke liye models ka data chahiye
+like import userModels in controller from models. 
+
+9) app.use(express.json());
+server direct by Default req.body se data padh hi nahi sakhta.
+
+10) npm i bcrypt
+bcrypt library: Before registering the user, hash the password.
+
+11) npm i jsonwebtoken, cookie-parser
+when we creating the user then after registering user request karega from any API
+to, need to know that request aa kaha se rahi hai. 
+for that we create token and store in the cookies.
+create token: jsonwebtoken
+
+** store in the cookies: cookie-parser 
+app.use(cookieParser());  --> cookie-parser ko as middleware use karna hoga.
+Cookie-parser middleware is used to parse the cookies that are attached to the request made by the client to the server.  
+
+12) const authController = require('../controllers/auth.controller');  Now jo bhi api banayi hai in controller and import it routes folder.
+Now routes server ko batane padhenge neahi to route path dene par execute nahi hogi in app/server file.
+const authRoutes = require('./routes/auth.routes');
+
+13) 
