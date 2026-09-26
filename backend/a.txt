@@ -1,11 +1,26 @@
-npx nodemon server.js
+1) npx nodemon server.js
 This cmd will track express server whenever the new changes are made.
 
-src/app.js -> for creating the express server.
+2) src/app.js -> for creating the express server.
 
-server.js -> for starting the express server.
+3) server.js -> for starting the express server.
 
-To connect to the DB.
+4) To connect to the DB.
 src/db/db.js
 
-Need to create user authentication routes.
+5) Need to create user authentication routes.
+src/routes/auth.routes.js 
+router.post("/user/register",)  --> Is api ka logic controller me likhte hai.
+
+
+6) controller logic: 
+router.post("/register", (req, res) => {
+    // (req, res)  --> This part is controller here. 
+    // "/register", (req, res) here (req, res) it called controller. In normal way it is callback. but with callback it is called controller.
+    // and iska logic controller folder me likhte hai.
+})
+
+
+7) Model create karne padenge.: src/models
+Like for User: src/models/userModel.js
+
