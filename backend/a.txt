@@ -50,7 +50,16 @@ const authRoutes = require('./routes/auth.routes');
 
 13) auth.routes: userRegister and userLogin
 
-14) 
+14)  middleware. 
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        // if this token is valid then jo bhi data tumne token(jwt) ke andar store kiya hoga vo decoded me aayega.
+        // const token = jwt.sign({
+        //         id: foodPartner._id
+        //     }, process.env.JWT_SECRET);
+        // Like here you give data id in object form. { id: foodPartner._id }
+
+
+15)
 
 
 
