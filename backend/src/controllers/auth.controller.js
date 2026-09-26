@@ -1,4 +1,3 @@
-const JWT_SECRET = require('dotenv').config();
 const userModel = require("../models/user.model");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -86,7 +85,18 @@ async function loginUser(req, res) {
     })
 }
 
+
+async function logoutUser(req, res) {
+
+    // Clear the token from cookie.
+    res.clearCookie("token");
+    res.status(200).json({
+        message: "User logeed out successfully"
+    })
+}
+
 module.exports = {
     registerUser,
-    loginUser
+    loginUser,
+    logoutUser
 }

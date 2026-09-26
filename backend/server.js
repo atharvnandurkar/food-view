@@ -2,6 +2,7 @@
 // here name app doesn't require to same as app file.
 // because we are declaring it in a new variable.
 // Start/call the database here.
+require('dotenv').config();
 const app = require("./src/app");
 const connectDb = require("./src/db/db");
 

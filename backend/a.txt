@@ -38,6 +38,7 @@ when we creating the user then after registering user request karega from any AP
 to, need to know that request aa kaha se rahi hai. 
 for that we create token and store in the cookies.
 create token: jsonwebtoken
+JWT_SECRET: require('dotenv').config(); in server.js for knowing we are using .env file JWT_SECRET
 
 ** store in the cookies: cookie-parser 
 app.use(cookieParser());  --> cookie-parser ko as middleware use karna hoga.
@@ -47,4 +48,9 @@ Cookie-parser middleware is used to parse the cookies that are attached to the r
 Now routes server ko batane padhenge neahi to route path dene par execute nahi hogi in app/server file.
 const authRoutes = require('./routes/auth.routes');
 
-13) 
+13) auth.routes: userRegister and userLogin
+
+14) 
+
+
+
