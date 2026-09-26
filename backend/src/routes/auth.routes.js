@@ -8,8 +8,11 @@ const router = express.Router();
 
 /**
  * - POST 
- *  Create the new user. Register.
+ * - Create the new user. 
+ * - Register
+ * - Login
  */
 router.post('/user/register', authController.registerUser);
+router.post('/user/login', authController.loginUser)
 
 module.exports = router;
