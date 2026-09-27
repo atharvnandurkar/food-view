@@ -12,9 +12,14 @@ const upload = multer({
 
 /* POST /api/food/  [protected]  */
 // Food item can be add by only food provider.
-router.post("/", 
+router.post("/",
     authMiddleware.authFoodPartnerMiddleware,
     upload.single("video"),  // Yaha video likha mean jo bhi frontend ke andar likha hoga vahi yaha pe "" double quote me likha hoga.
     foodController.createFood);
+
+
+/* GET /api/food/ [protected] */
+router.get('/', authMiddleware.authUserMiddleware, foodController.getFoodItems);
+
 
 module.exports = router;
