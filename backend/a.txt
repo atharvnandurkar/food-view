@@ -59,7 +59,62 @@ const authRoutes = require('./routes/auth.routes');
         // Like here you give data id in object form. { id: foodPartner._id }
 
 
-15)
+15)  // Because when we create middleware, we store the foodPartner info in req. headers.
+    // router.post("/", authMiddleware.authFoodPartnerMiddleware, foodController.createFood);
+    // authMiddleware.authFoodPartnerMiddleware -->> After this our controller get logic i.e. foodController.createFood
+
+
+16)   // Create body: form-data video file format. but it will give undefined. 
+    // because now you're also sending from frontend name and descript in text format. 
+    // and jo video hai vo file format mai hai.
+    console.log(req.body); 
+
+    // Express ka server file ko nahi read kar sakhta by default.
+    // For that we need to add multer package.
+
+
+17) 
+
+ console.log(req.body);  
+    console.log(req.file);
+
+{
+  _id: new ObjectId('6ab7a0f9c4c74f61b9661532'),
+  name: 'boy',
+  email: 'boy@.com',
+  password: '$2b$09$muymIUXgZ721kCP.COtQJeeO1T7.wHtoC5K9fKqWGHoEDLVbpjO8q',
+  __v: 0
+}
+[Object: null prototype] {
+  name: 'test meal',
+  description: 'test description'
+}
+{
+  fieldname: 'video',
+  originalname: 'food.mp4',
+  encoding: '7bit',
+  mimetype: 'video/mp4',
+  buffer: <Buffer 00 00 00 1c 66 74 79 70 69 73 6f 35 00 00 02 00 69 73 6f 35 69 73 6f 36 6d 70 34 31 00 00 03 2a 6d 6f 6f 76 00 00 00 6c 6d 76 68 64 00 00 00 00 00 00 ... 2462675 more bytes>,
+  size: 2462725
+}
+
+
+18) File ko server pe upload kar diya but now file ko 
+  server in production --> for that -> Cloud Storage provider. e.g. Dropbox, google drive, oneDrive, AWS
+
+Cloud Storage provider: Allow users to store digital data on remoter servers managed by a third-party provider, accessible via the internet.
+imagekit we're using.
+
+imagekit --> imagekit pe file upload karo and imagekit url dega. url ka access mil gaya to file ka access mil jayega.
+
+imagekit nodejs docs: https://github.com/imagekit-developer/imagekit-nodejs
+
+
+19) npm i uuid 
+uuid generator -> Generates unique id.
+
+20)  dEoIThAHXDVmSUdK
+
 
 
 
