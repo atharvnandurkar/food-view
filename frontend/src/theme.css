@@ -1,0 +1,56 @@
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --auth-canvas: #f7f8f5;
+  --auth-ink: #202a23;
+  --auth-muted: #737d75;
+  --auth-line: #dce2dc;
+  --auth-input: #fff;
+  --auth-placeholder: #a0a9a1;
+  --auth-accent: #397253;
+  --auth-accent-hover: #2c6045;
+  --auth-button-text: #fff;
+  --auth-focus: rgb(57 114 83 / 15%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --auth-canvas: #1a211c;
+    --auth-ink: #edf3ee;
+    --auth-muted: #aab5ac;
+    --auth-line: #39453d;
+    --auth-input: #202a23;
+    --auth-placeholder: #859188;
+    --auth-accent: #8fc5a0;
+    --auth-accent-hover: #a4d2b2;
+    --auth-button-text: #17221a;
+    --auth-focus: rgb(143 197 160 / 18%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--auth-canvas);
+}
+
+button,
+input {
+  font: inherit;
+}
