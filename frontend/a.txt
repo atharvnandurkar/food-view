@@ -5,4 +5,7 @@ Routes: 1) User: /user/register  => user register form.
                         /food-partner/login   => Foodpartner login form.
 
 
-
+2) How to send data from frontend to backend.
+API call; for ex: /user/register is api ke request karni hai.
+Then how to do this request to API.
+For that need package: axios
