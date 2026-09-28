@@ -151,5 +151,5 @@ module.exports = {
     getFoodItems,
     likeFood,
     saveFood,
-    getSavedFood
+    getSaveFood
 }
