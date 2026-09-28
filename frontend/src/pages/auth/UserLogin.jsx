@@ -1,13 +1,3 @@
-// import AuthLayout from "./AuthLayout";
-
-// function UserLogin() {
-//   return <AuthLayout audience="user" mode="login" />;
-// }
-
-// export default UserLogin;
-
-
-
 import React from 'react';
 import '../../styles/auth-shared.css';
 import axios from 'axios';

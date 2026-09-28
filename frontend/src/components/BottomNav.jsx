@@ -10,7 +10,7 @@ const BottomNav = () => {
           to="/"
           end
           className={({ isActive }) =>
-            `bottom-nav__item ${isActive ? "is-active" : ""}`
+            `bottom-nav__item ${isActive ? "is-acitve" : ""}`
           }
         >
           <span className="bottom-nav__icon" aria-hidden="true">
@@ -31,10 +31,9 @@ const BottomNav = () => {
           </span>
           <span className="bottom-nav__label">Home</span>
         </NavLink>
-
         <NavLink
           to="/saved"
-          className={({ isActive }) =>
+          className={(isActive) =>
             `bottom-nav__item ${isActive ? "is-active" : ""}`
           }
         >
@@ -53,7 +52,7 @@ const BottomNav = () => {
               <path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z" />
             </svg>
           </span>
-          <span className="bottom-nav__label">Saved</span>
+          <span className="bottom-nav__label"></span>
         </NavLink>
       </div>
     </nav>
